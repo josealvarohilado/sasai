@@ -1,0 +1,360 @@
+/*!
+Theme Name: SASAI
+Theme URI: http://sasai.org
+Author: Alvaro Hialdo
+Author URI: http://sasai.org/
+Description: Sasai Website
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: SASAI
+*/
+
+/*
+Fonts
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+  padding: 0 !important;
+}
+
+.custom-logo{
+  width: 200px !important;
+  height: auto !important;
+}
+
+nav .navbar-nav a {
+  color: #369d96 !important;
+}
+
+nav .navbar-nav a:hover {
+  text-decoration:none;
+  color: #297973 !important;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  padding: 0 10px !important;
+}
+
+/* Page banner style */
+.page-banner {
+  padding: 200px 0;
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+#activities {
+  background-position: top;
+}
+
+.page-banner p{
+  font-size: 100px;
+}
+
+/* Front page style */
+.text-overlay h1{
+  position: absolute;
+  color: #fff;
+  top: 100px;
+  left: 100px;
+}
+
+.carousel-item:after {
+  content:"";
+  display:block;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:rgba(0, 0, 0, 0.3);
+}
+
+.we-are-sasai{
+  color: #4F4F4F;
+  text-transform: uppercase;
+}
+
+.sasai-descr {
+  font-size: 15px;
+  font-weight: 500;
+  padding: 0 150px;
+}
+
+.three-columns p{
+  color: #297973;
+}
+
+.learn-more a {
+  text-decoration: none;
+}
+
+.learn-more p {
+  font-size: 26px;
+}
+
+.theme-color {
+  color: #297973;
+}
+
+/* Latest news style*/
+#latest-news img{
+  margin: auto;
+  width: 100%;
+  padding-bottom: 10px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Donate section style */
+#donate{
+  color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+  padding: 80px 0;
+}
+
+.btn-donate {
+  padding: 15px 30px;
+  color: #297973;
+  background: #fff;
+  font-size: 20px;
+}
+
+.btn-donate:hover{
+  color: #fff;
+  background: #297973;
+}
+
+.list-item {
+  padding-bottom: 1rem;
+}
+
+.donate-sub-heading {
+  font-size: 1.2rem;
+}
+
+/* Front page button style */
+.btn-more-news {
+  padding: 10px 25px;
+  background-color: #fff;
+  color: #297973;
+  font-size: 20px;
+  font-weight: 300;
+  border: #297973 3px solid;
+}
+
+.btn-more-news:hover{
+  background-color: #297973;
+  color: #fff;
+}
+
+.sponsors img {
+  max-width: 100%;
+  max-height: 150px;
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Footer Style */
+footer {
+  background-color: #3a3d47;
+}
+
+footer h6{
+  color: #7D7D7D;
+  text-transform: uppercase;
+}
+
+footer li, a{
+  color: #fff;
+  line-height: 2rem;
+}
+
+footer a:hover{
+  text-decoration: none;
+  color: #297973;
+}
+
+footer .fab {
+  font-size: 25px;
+  color: #fff;
+  justify-content: center;
+}
+
+footer .btn {
+  border-radius: 15px;
+  background-color: #297973;
+  margin: 0.1rem;
+}
+
+footer .fa-facebook-f{
+  padding: 0 5px;
+}
+
+footer .fa-linkedin-in {
+  padding: 0 4px;
+}
+
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.wpcf7-submit {
+  border: 1px solid #297973;
+  background-color: #297973;
+  padding: 10px 15px;
+  color: #fff;
+  border: 0;
+  border-radius: 0.25rem;
+}
+
+.wpcf7-submit:hover {
+  border: 1px solid #297973;
+  color: #297973;
+  background-color: #fff;
+}
+
+.wpcf7-text, .wpcf7-textarea {
+  border: 1px solid !important;
+  border-radius: 0px !important;
+  width: 100% !important;
+}
+
+.contact-form label {
+	font-weight: 100 !important;
+}
+
+.pad-container {
+  padding: 80px 0;
+}
+
+/* Give Form */
+.give-form-title{
+  color: #297973 !important;
+}
+
+.give-btn {
+  border: 1px solid #297973;
+  background-color: #fff;
+  color: #297973;
+}
+
+.give-btn:hover {
+  background-color: #297973;
+  color: #fff;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  bottom: 3rem;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 32rem;
+}
+.carousel-item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
+  object-fit: cover !important;
+  display: block;
+  margin: auto;
+}
+
+.carousel-inner img{
+  margin: auto;
+  width: 100%;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 576px) {
+  .footer-text-align {
+    text-align: center;
+  }
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (max-width: 768px) {
+  .text-overlay h1{
+    font-size: 25px;
+    top: 100px;
+    left: 30px;
+  }
+
+  .navbar {
+    max-width: 768px;
+    margin: auto;
+    padding: 20px ;
+  }  
+
+  #latest-news img{
+    width: 70%;
+  }
+
+  .page-banner {
+    padding: 100px 0 100px 0;
+  }
+
+  .page-banner p{
+    font-size: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .sasai-descr {
+    padding: 0px;
+  }
+
+  .navbar {
+    max-width: 992px;
+    margin: auto;
+    padding: 20px ;
+  }  
+
+}
+
+@media (min-width: 992px) {
+  /* .navbar {
+    max-width: 992px;
+    margin: auto;
+    padding: 20px ;
+  }   */
+}
+
+@media (min-width: 1200px) {
+  
+}
