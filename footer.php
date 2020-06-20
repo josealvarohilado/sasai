@@ -6,19 +6,29 @@
       <div class="col-md-3 col-lg-3">
         <h6>Ways to give</h6>
         <ul class="list-unstyled">
-          <li><a href="<?php the_field('link_url_1','option')?>"><?php the_field('link_text_1','option')?></a></li>
-          <li><a href="<?php the_field('link_url_2','option')?>"><?php the_field('link_text_2','option')?></a></li>
-          <li><a href="<?php the_field('link_url_3','option')?>"><?php the_field('link_text_3','option')?></a></li>
-          <li><a href="<?php the_field('link_url_4','option')?>"><?php the_field('link_text_4','option')?></a></li>
+          <?php
+          if(have_rows ('ways_to_give_repeater','option')):
+            while(have_rows('ways_to_give_repeater','option')) : the_row();
+            ?>
+            <li><a href="<?php the_sub_field('link_url');?>"><?php the_sub_field('link_text');?></a></li>
+            <?php
+             endwhile;
+          endif;
+          ?>
         </ul>
       </div>
       <div class="col-md-3 col-lg-3">
         <h6>More from SASAI</h6>
         <ul class="list-unstyled">
-          <li><a href="<?php the_field('link_url_5','option')?>"><?php the_field('link_text_5','option')?></a></li>
-          <li><a href="<?php the_field('link_url_6','option')?>"><?php the_field('link_text_6','option')?></a></li>
-          <li><a href="<?php the_field('link_url_7','option')?>"><?php the_field('link_text_7','option')?></a></li>
-          <li><a href="<?php the_field('link_url_8','option')?>"><?php the_field('link_text_8','option')?></a></li>
+          <?php
+            if(have_rows ('more_from_sasai_repeater','option')):
+              while(have_rows('more_from_sasai_repeater','option')) : the_row();
+              ?>
+              <li><a href="<?php the_sub_field('link_url');?>"><?php the_sub_field('link_text');?></a></li>
+              <?php
+              endwhile;
+            endif;
+          ?>
         </ul>
       </div>
       <div class="col-md-3 col-lg-3">

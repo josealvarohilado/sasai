@@ -32,18 +32,18 @@
 
     <!-- Three columns -->
     <div class="row three-columns py-4">
-      <div class="col-lg-4" >
-        <img src="<?php the_field('icon_image_1')?>" width="140" height="140" alt="Icon 1">
-        <p class="mt-2"><?php the_field('icon_text_1'); ?></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="<?php the_field('icon_image_2')?>" width="140" height="140" alt="Icon 1">
-        <p class="mt-2"><?php the_field('icon_text_1'); ?></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img src="<?php the_field('icon_image_3')?>" width="140" height="140" alt="Icon 1">  
-        <p class="mt-2"><?php the_field('icon_text_1'); ?></p>
-      </div><!-- /.col-lg-4 -->
+    <?php
+      if (have_rows('icons')):
+          while (have_rows('icons')) : the_row();
+          ?>
+          <div class="col-lg-4" >
+            <img src="<?php echo get_sub_field('icon_image')['url'];?>" width="140" height="140" alt="<?php echo get_sub_field('icon_image')['alt'];?>">
+            <p class="mt-2"><?php the_sub_field('icon_text');?></p>
+          </div>
+          <?php
+        endwhile;
+      endif;
+    ?>
     </div><!-- /.row -->
 
     <!-- Learn More -->

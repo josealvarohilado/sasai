@@ -40,8 +40,8 @@ add_action( 'after_setup_theme', 'register_navwalker' );
 //Custom Options
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
-		'page_title' 	=> 'SASAI Content',
-		'menu_title'	=> 'SASAI Content',
+		'page_title' 	=> __('SASAI Content'),
+		'menu_title'	=> __('SASAI Content'),
 		'menu_slug' 	=> 'sasai-content',
 		'capability'	=> 'edit_posts',
 		'redirect'		=> false
