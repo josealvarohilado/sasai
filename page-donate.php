@@ -7,12 +7,16 @@
 <div class="container pad-container">
     <h1 class="theme-color text-center">Ways to Give</h1>
     <p class="text-center pb-3 donate-sub-heading"><?php the_field('ways_to_give_sub_text'); ?></p>
-    <h2 class="theme-color"><?php the_field('sub_heading_1'); ?></h2>
-    <p><?php the_field('sub_text_1'); ?></p>
-    <h2 class="theme-color"><?php the_field('sub_heading_2'); ?></h2>
-    <p><?php the_field('sub_text_2'); ?></p>
-    <h2 class="theme-color"><?php the_field('sub_heading_3'); ?></h2>
-    <p><?php the_field('sub_text_3'); ?></p>
+    <?php
+      if(have_rows('donate_content')):
+        while(have_rows('donate_content')) : the_row();
+        ?>
+        <h2 class="theme-color"><?php the_sub_field('sub_heading'); ?></h2>
+        <p><?php the_sub_field('sub_heading_text'); ?></p>
+        <?php
+        endwhile;
+      endif;
+    ?>
 </div>
 
 <!-- Donate Section -->

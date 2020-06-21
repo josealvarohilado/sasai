@@ -54,8 +54,8 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Donate',
-		'menu_title'	=> 'Donate',
+		'page_title' 	=> 'Donate Section',
+		'menu_title'	=> 'Donate Section',
 		'parent_slug'	=> 'sasai-content',
 	));
 	
