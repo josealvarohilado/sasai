@@ -77,9 +77,11 @@
           <div>
             <?php the_field('bullet_points','option');?>
           </div>
-          <div class="text-center pt-3">
-            <a href="<?php the_field('donate_button_url','option');?>" type="button" class="btn btn-donate" role="button">Donate</a>
-          </div>
+          <?php if(get_field('donate_button_url','option') != NULL || get_field('donate_button_url','option') != ''): ?>
+            <div class="text-center pt-3">
+              <a href="<?php the_field('donate_button_url','option');?>" type="button" class="btn btn-donate" role="button">Donate</a>
+            </div>
+          <?php endif; ?>
         </div>
     </section>
 
