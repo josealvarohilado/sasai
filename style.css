@@ -18,10 +18,19 @@ Fonts
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
+html {
+  padding-bottom: 300px;
+  min-height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  position: relative;
+}
 
 body {
   color: #5a5a5a;
   font-family: 'Poppins', sans-serif;
+  height: 100%;
+  margin: 0;
 }
 
 .navbar{
@@ -62,6 +71,12 @@ nav .navbar-nav a:hover {
 
 .page-banner p{
   font-size: 100px;
+}
+
+/* Page Content */
+
+#text-content h1, #text-content h2{
+  color: #297973 !important;
 }
 
 /* Front page style */
@@ -150,7 +165,7 @@ nav .navbar-nav a:hover {
 }
 
 /* Front page button style */
-.btn-more-news {
+.btn-custom {
   padding: 10px 25px;
   background-color: #fff;
   color: #297973;
@@ -159,7 +174,7 @@ nav .navbar-nav a:hover {
   border: #297973 3px solid;
 }
 
-.btn-more-news:hover{
+.btn-custom:hover{
   background-color: #297973;
   color: #fff;
 }
@@ -175,6 +190,8 @@ nav .navbar-nav a:hover {
 /* Footer Style */
 footer {
   background-color: #3a3d47;
+  position: absolute;
+  bottom: 0;
 }
 
 footer h6{
@@ -302,6 +319,10 @@ footer .fa-linkedin-in {
   .footer-text-align {
     text-align: center;
   }
+
+  html {
+    padding-bottom: 700px;
+  }
 }
 
 @media (min-width: 576px) {
@@ -348,11 +369,7 @@ footer .fa-linkedin-in {
 }
 
 @media (min-width: 992px) {
-  /* .navbar {
-    max-width: 992px;
-    margin: auto;
-    padding: 20px ;
-  }   */
+  
 }
 
 @media (min-width: 1200px) {

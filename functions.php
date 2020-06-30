@@ -38,32 +38,4 @@ function register_navwalker(){
 add_action( 'after_setup_theme', 'register_navwalker' );
 
 //Custom Options
-if( function_exists('acf_add_options_page') ) {
-	acf_add_options_page(array(
-		'page_title' 	=> __('SASAI Content'),
-		'menu_title'	=> __('SASAI Content'),
-		'menu_slug' 	=> 'sasai-content',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Latest News Section',
-		'menu_title'	=> 'Latest News section',
-		'parent_slug'	=> 'sasai-content',
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Donate Section',
-		'menu_title'	=> 'Donate Section',
-		'parent_slug'	=> 'sasai-content',
-	));
-	
-	acf_add_options_sub_page(array(
-		'page_title' 	=> 'Footer',
-		'menu_title'	=> 'Footer',
-		'parent_slug'	=> 'sasai-content',
-	));
-}
-
 ?>
