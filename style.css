@@ -19,7 +19,7 @@ Fonts
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 html {
-  padding-bottom: 300px;
+  padding-bottom: 265px;
   min-height: 100%;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -229,6 +229,14 @@ footer .fa-linkedin-in {
   padding: 0 4px;
 }
 
+footer p {
+  color: #fff;
+  font-size: 13px;
+  margin-left: 15px;
+  margin-top: 10px;
+  text-align: left;
+}
+
 .btn:focus,.btn:active {
   outline: none !important;
   box-shadow: none;
@@ -315,18 +323,20 @@ footer .fa-linkedin-in {
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
-@media (max-width: 576px) {
+@media (max-width: 992px) {
+  .sasai-descr {
+    padding: 0px;
+  }
+
+  .navbar {
+    max-width: 992px;
+    margin: auto;
+    padding: 20px ;
+  }  
+
   .footer-text-align {
-    text-align: center;
+    text-align: left;
   }
-
-  html {
-    padding-bottom: 700px;
-  }
-}
-
-@media (min-width: 576px) {
-
 }
 
 @media (max-width: 768px) {
@@ -353,25 +363,33 @@ footer .fa-linkedin-in {
   .page-banner p{
     font-size: 70px;
   }
-}
 
-@media (max-width: 992px) {
-  .sasai-descr {
-    padding: 0px;
+  .footer-text-align {
+    text-align: left;
   }
 
-  .navbar {
-    max-width: 992px;
-    margin: auto;
-    padding: 20px ;
-  }  
-
 }
 
-@media (min-width: 992px) {
-  
+@media (max-width: 1200px){
+  html {
+    padding-bottom: 380px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 576px) {
+  .footer-text-align {
+    text-align: center;
+  }
+
+  html {
+    padding-bottom: 780px;
+  }
+
+  footer p {
+    text-align: center;
+  } 
+}
+
+@media (max-width: 360px) {
   
 }
