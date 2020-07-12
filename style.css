@@ -84,7 +84,7 @@ nav .navbar-nav a:hover {
   position: absolute;
   color: #fff;
   top: 100px;
-  left: 100px;
+  text-align: center;
 }
 
 .carousel-item:after {

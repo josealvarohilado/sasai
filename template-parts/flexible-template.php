@@ -96,53 +96,17 @@
   <section id="corporate-legend" class="container py-3 text-center">
     <div>
       <?php the_field('corporate_legend_text','option'); ?>
-        <div class='container'>
+        <div class='container pb-5 pt-3'>
             <?php
-                // check if the repeater field has rows of data
-                $totalRows = count(get_field('sponsors','option'));
-                if( have_rows('sponsors','option') ):
-                    $r = 0;
-                    // loop through the rows of data
-                    while ( have_rows('sponsors','option') ) : the_row();
-                        if ($r == 0 || $r % 3 == 0 ) :
-                        $remainingItems = $totalRows - $r;     
+                $columns = get_field('icon_columns','option');
+                if(get_field('autoplay','option')) {
+                  $autoplay = 'true';
+                }else{
+                  $autoplay = 'false';
+                };
+                
+                echo do_shortcode('[logoshowcase slides_column="'.$columns.'" dots="false" loop="true" autoplay="'.$autoplay.'" image_size="medium"]');
             ?>
-                <div class="row pb-4">
-            <?php
-                endif;
-            $r++;
-            $sponsor_img_url = get_sub_field('sponsor_gallery')['url'];
-            $sponsor_img_alt = get_sub_field('sponsor_gallery')['alt'];
-            $sponsor_url = get_sub_field('sponsor_url');
-
-            if ( $remainingItems >= 3) : ?>
-                <!-- Sponsors more than 3, create 3 columns -->
-                <div class="col-md-4 sponsors py-2">
-            <?php elseif ($remainingItems == 2): ?>
-                <!-- Only 2 sponsors left, create 2 columns -->
-                <div class="col-md-6 sponsors py-2">
-            <?php else: ?>
-                <!-- 1 Sponsor left, create 1 column -->
-                <div class="col-md-12 sponsors py-2">
-            <?php endif; ?>
-                <?php
-                    if($sponsor_url != '') : ?>
-                    <a href="<?= $sponsor_url?>"><img src="<?= $sponsor_img_url?>" alt="<?= $sponsor_img_alt?>"></a>
-                    <?php else: ?>
-                    <img src="<?= $sponsor_img_url?>" alt="<?= $sponsor_img_alt?>">
-                    <?php endif; ?>
-            </div>
-        <?php
-            if ($r == 0 || $r % 3 == 0 ) :
-        ?>
-            </div> 
-        <?php
-            endif;
-            endwhile;
-        
-        endif;
-        ?>
-        </div>
         </div>
     </div>
   </section>

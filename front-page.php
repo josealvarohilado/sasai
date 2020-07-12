@@ -16,9 +16,11 @@
         $i++; 
         endforeach;?>
     </div>
-    <div class="text-overlay">
+    <div class="container">
+      <div class="text-overlay">
         <h1><?php the_field('banner_tag_line'); ?></h1>
       </div>
+    </div>
   </div>
 
   <!-- We are SASAI section -->

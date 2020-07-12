@@ -6,6 +6,8 @@ function sasai_enqueue_scripts() {
   wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css', array(), 202005 );
   wp_enqueue_style( 'sasai', get_stylesheet_directory_uri() . '/style.css', array(), 202005 );
   // all scripts
+  wp_deregister_script('jquery');
+  wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"), false, '3.5.1');
   wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/js/bootstrap.js', array('jquery'), '202005', true );
   wp_enqueue_script( 'sasai', get_template_directory_uri() . '/js/sasai.js', array('jquery'), '202005', true );
   wp_enqueue_script( 'fontawesome', 'https://kit.fontawesome.com/7cd815e053.js', array('jquery'), '202005', true );
