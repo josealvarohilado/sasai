@@ -320,6 +320,10 @@ footer p {
   width: 100%;
 }
 
+.slick-list {
+  margin: 0 20px !important;
+}
+
 /* RESPONSIVE CSS
 -------------------------------------------------- */
 
@@ -388,8 +392,4 @@ footer p {
   footer p {
     text-align: center;
   } 
-}
-
-@media (max-width: 360px) {
-  
 }
